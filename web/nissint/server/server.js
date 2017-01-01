@@ -1,11 +1,14 @@
 #!/usr/bin/env nodejs
+"use strict";
 
-var express = require('express')
-var app = express()
+const express = require( 'express' );
+const app = express();
+
+let port = 6699;
 
 app.use( express.static( 'client' ) );
 
-app.listen( 6699, () => {
-  console.log('Example app listening on port 3000!')
-})
+app.listen( port, () => {
+  console.log( `Example app listening on port ${port}!` )
+});
 
